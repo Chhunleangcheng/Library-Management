@@ -1,0 +1,10 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Your custom styles here */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Figtree', sans-serif;
+}
+
+/* Add the custom styles from the layout above */

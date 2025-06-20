@@ -1,0 +1,38 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class StoreBorrowingRequest extends FormRequest
+{
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function rules(): array
+    {
+        return [
+            'member_id' => 'required|exists:members,id',
+            'book_id' => 'required|exists:books,id',
+            'borrowed_at' => 'required|date',
+            'due_date' => 'required|date|after:borrowed_at',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'member_id.required' => 'សមាជិកត្រូវតែជ្រើសរើស',
+            'member_id.exists' => 'សមាជិកមិនត្រឹមត្រូវ',
+            'book_id.required' => 'សៀវភៅត្រូវតែជ្រើសរើស',
+            'book_id.exists' => 'សៀវភៅមិនត្រឹមត្រូវ',
+            'borrowed_at.required' => 'ថ្ងៃខ្ចីត្រូវតែបំពេញ',
+            'borrowed_at.date' => 'ថ្ងៃខ្ចីត្រូវតែជាកាលបរិច្ឆេទត្រឹមត្រូវ',
+            'due_date.required' => 'ថ្ងៃត្រូវត្រឡប់ត្រូវតែបំពេញ',
+            'due_date.date' => 'ថ្ងៃត្រូវត្រឡប់ត្រូវតែជាកាលបរិច្ឆេទត្រឹមត្រូវ',
+            'due_date.after' => 'ថ្ងៃត្រូវត្រឡប់ត្រូវតែក្រោយថ្ងៃខ្ចី',
+        ];
+    }
+}
