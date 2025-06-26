@@ -48,7 +48,7 @@
                 <div>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="dropdown-item text-danger khmer-medium">
+                        <button type="submit" class="dropdown-item text-white khmer-medium">
                             <i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
                         </button>
                     </form>
