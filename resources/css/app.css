@@ -8,3 +8,12 @@ body {
 }
 
 /* Add the custom styles from the layout above */
+:root {
+    --primary-gradient: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%);
+    --success-gradient: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+    --info-gradient: linear-gradient(90deg, #0ea5e9 0%, #06b6d4 100%);
+    --warning-gradient: linear-gradient(90deg, #eab308 0%, #f59e42 100%);
+    --danger-gradient: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+    --shadow-medium: 0 4px 20px 0 rgba(0, 0, 0, 0.07);
+    --shadow-strong: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+}

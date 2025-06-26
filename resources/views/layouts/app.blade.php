@@ -63,27 +63,6 @@
     </style>
 </head>
 <body>
-<!-- Status Bar -->
-<div class="bg-dark text-white py-2">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <small>
-                    <i class="bi bi-clock me-1"></i>
-                    <span class="khmer-regular">Current Date and Time (UTC): </span>
-                    <strong id="status-time">២០២៥-០៦-២០ ០៦:៤៩:២១</strong>
-                </small>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <small>
-                    <i class="bi bi-person me-1"></i>
-                    <span class="khmer-regular">Current User: </span>
-                    <strong>Chhunleangcheng</strong>
-                </small>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Navigation -->
 @include('layouts.navigation')

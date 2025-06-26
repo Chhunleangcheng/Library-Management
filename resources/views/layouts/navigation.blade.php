@@ -43,49 +43,15 @@
 
             <!-- Right Side: Time and User -->
             <div class="navbar-nav">
-                <!-- Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-06-20 06:49:21 -->
-                <div class="nav-item me-3">
-                    <div class="nav-link p-2 bg-light text-dark rounded">
-                        <small class="d-block khmer-regular">ពេលវេលា UTC:</small>
-                        <strong class="khmer-medium" id="nav-time">២០២៥-០៦-២០ ០៦:៤៩:២១</strong>
-                    </div>
-                </div>
 
                 <!-- Current User's Login: Chhunleangcheng -->
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="{{ route('profile.edit') }} id="userDropdown" role="button" data-bs-toggle="dropdown">
-                        <div class="bg-white text-primary rounded-circle me-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
-                            <strong>{{ strtoupper(substr('Chhunleangcheng', 0, 2)) }}</strong>
-                        </div>
-                        <span class="khmer-semibold">Chhunleangcheng</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                            <h6 class="dropdown-header khmer-semibold">Chhunleangcheng</h6>
-                        </li>
-                        <li>
-                            <span class="dropdown-item-text small">
-                                <i class="bi bi-clock me-1"></i>
-                                <span class="khmer-regular">ចូលនៅ: </span>
-                                <span id="login-time">២០២៥-០៦-២០ ០៦:៤៩:២១</span>
-                            </span>
-                        </li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li>
-                            <a class="dropdown-item khmer-regular" href="{{ route('profile.edit') }}">
-                                <i class="bi bi-person-gear me-2"></i>កែប្រែព័ត៌មាន
-                            </a>
-                        </li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li>
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <button type="submit" class="dropdown-item text-danger khmer-medium">
-                                    <i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
+                <div>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="dropdown-item text-danger khmer-medium">
+                            <i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

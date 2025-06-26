@@ -19,11 +19,11 @@ Route::middleware('auth')->group(function () {
     // Books routes
     Route::resource('books', BookController::class);
 
-    // Members routes
+    // Member routes
     Route::resource('members', MemberController::class);
     Route::get('/members/{member}/export-history', [MemberController::class, 'exportHistory'])->name('members.export-history');
 
-    // Borrowings routes
+    // Borrowing routes
     Route::resource('borrowings', BorrowingController::class);
     Route::patch('/borrowings/{borrowing}/return', [BorrowingController::class, 'returnBook'])->name('borrowings.return');
     Route::post('/borrowings/{borrowing}/fine', [BorrowingController::class, 'addFine'])->name('borrowings.fine');

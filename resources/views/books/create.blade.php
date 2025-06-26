@@ -110,16 +110,16 @@
                                             name="genre"
                                             required>
                                         <option value="">ជ្រើសរើសប្រភេទសៀវភៅ</option>
-                                        <option value="Fiction" {{ old('genre') == 'Fiction' ? 'selected' : '' }}>Fiction (រឿងប្រលោមលោក)</option>
-                                        <option value="Non-Fiction" {{ old('genre') == 'Non-Fiction' ? 'selected' : '' }}>Non-Fiction (មិនមែនប្រលោមលោក)</option>
-                                        <option value="Science Fiction" {{ old('genre') == 'Science Fiction' ? 'selected' : '' }}>Science Fiction (រឿងប្រលោមលោកវិទ្យាសាស្ត្រ)</option>
-                                        <option value="Fantasy" {{ old('genre') == 'Fantasy' ? 'selected' : '' }}>Fantasy (ការស្រមើលស្រមៃ)</option>
-                                        <option value="Mystery" {{ old('genre') == 'Mystery' ? 'selected' : '' }}>Mystery (អាថ៌កំបាំង)</option>
-                                        <option value="Romance" {{ old('genre') == 'Romance' ? 'selected' : '' }}>Romance (ស្នេហា)</option>
-                                        <option value="Biography" {{ old('genre') == 'Biography' ? 'selected' : '' }}>Biography (ជីវប្រវត្តិ)</option>
-                                        <option value="History" {{ old('genre') == 'History' ? 'selected' : '' }}>History (ប្រវត្តិសាស្ត្រ)</option>
-                                        <option value="Education" {{ old('genre') == 'Education' ? 'selected' : '' }}>Education (អប់រំ)</option>
-                                        <option value="Children" {{ old('genre') == 'Children' ? 'selected' : '' }}>Children (កុមារ)</option>
+                                        <option value="Fiction" {{ old('genre') === 'Fiction' ? 'selected' : '' }}>Fiction (រឿងប្រលោមលោក)</option>
+                                        <option value="Non-Fiction" {{ old('genre') === 'Non-Fiction' ? 'selected' : '' }}>Non-Fiction (មិនមែនប្រលោមលោក)</option>
+                                        <option value="Science Fiction" {{ old('genre') === 'Science Fiction' ? 'selected' : '' }}>Science Fiction (រឿងប្រលោមលោកវិទ្យាសាស្ត្រ)</option>
+                                        <option value="Fantasy" {{ old('genre') === 'Fantasy' ? 'selected' : '' }}>Fantasy (ការស្រមើលស្រមៃ)</option>
+                                        <option value="Mystery" {{ old('genre') === 'Mystery' ? 'selected' : '' }}>Mystery (អាថ៌កំបាំង)</option>
+                                        <option value="Romance" {{ old('genre') === 'Romance' ? 'selected' : '' }}>Romance (ស្នេហា)</option>
+                                        <option value="Biography" {{ old('genre') === 'Biography' ? 'selected' : '' }}>Biography (ជីវប្រវត្តិ)</option>
+                                        <option value="History" {{ old('genre') === 'History' ? 'selected' : '' }}>History (ប្រវត្តិសាស្ត្រ)</option>
+                                        <option value="Education" {{ old('genre') === 'Education' ? 'selected' : '' }}>Education (អប់រំ)</option>
+                                        <option value="Children" {{ old('genre') === 'Children' ? 'selected' : '' }}>Children (កុមារ)</option>
                                     </select>
                                     @error('genre')
                                     <div class="invalid-feedback khmer-regular">{{ $message }}</div>
@@ -732,7 +732,7 @@
                 }, 500));
             });
 
-            // Clear saved data on successful submit
+            // Clear saved data on successful submitting
             form.addEventListener('submit', function() {
                 localStorage.removeItem(formData);
             });
@@ -784,6 +784,9 @@
         // Smart suggestions
         function setupSmartSuggestions() {
             const genreSelect = document.getElementById('genre');
+            genreSelect.style = undefined;
+            genreSelect.value = undefined;
+            genreSelect.value = undefined;
             const titleInput = document.getElementById('title');
 
             // Auto-suggest genre based on title keywords
@@ -842,7 +845,7 @@
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
 
-                    // Show validation message
+                    // Show a validation message
                     const firstInvalid = form.querySelector(':invalid');
                     if (firstInvalid) {
                         firstInvalid.focus();
@@ -883,7 +886,7 @@
                 section.style.animationDelay = `${index * 0.1}s`;
             });
 
-            // Auto-focus first input
+            // Autofocus first input
             const firstInput = document.getElementById('title');
             if (firstInput) {
                 setTimeout(() => firstInput.focus(), 300);

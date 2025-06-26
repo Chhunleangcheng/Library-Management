@@ -168,16 +168,16 @@
                                             name="genre"
                                             required>
                                         <option value="">ជ្រើសរើសប្រភេទសៀវភៅ</option>
-                                        <option value="Fiction" {{ old('genre', $book->genre) == 'Fiction' ? 'selected' : '' }}>Fiction (រឿងប្រលោមលោក)</option>
-                                        <option value="Non-Fiction" {{ old('genre', $book->genre) == 'Non-Fiction' ? 'selected' : '' }}>Non-Fiction (មិនមែនប្រលោមលោក)</option>
-                                        <option value="Science Fiction" {{ old('genre', $book->genre) == 'Science Fiction' ? 'selected' : '' }}>Science Fiction (រឿងប្រលោមលោកវិទ្យាសាស្ត្រ)</option>
-                                        <option value="Fantasy" {{ old('genre', $book->genre) == 'Fantasy' ? 'selected' : '' }}>Fantasy (ការស្រមើលស្រមៃ)</option>
-                                        <option value="Mystery" {{ old('genre', $book->genre) == 'Mystery' ? 'selected' : '' }}>Mystery (អាថ៌កំបាំង)</option>
-                                        <option value="Romance" {{ old('genre', $book->genre) == 'Romance' ? 'selected' : '' }}>Romance (ស្នេហា)</option>
-                                        <option value="Biography" {{ old('genre', $book->genre) == 'Biography' ? 'selected' : '' }}>Biography (ជីវប្រវត្តិ)</option>
-                                        <option value="History" {{ old('genre', $book->genre) == 'History' ? 'selected' : '' }}>History (ប្រវត្តិសាស្ត្រ)</option>
-                                        <option value="Education" {{ old('genre', $book->genre) == 'Education' ? 'selected' : '' }}>Education (អប់រំ)</option>
-                                        <option value="Children" {{ old('genre', $book->genre) == 'Children' ? 'selected' : '' }}>Children (កុមារ)</option>
+                                        <option value="Fiction" {{ old('genre', $book->genre) === 'Fiction' ? 'selected' : '' }}>Fiction (រឿងប្រលោមលោក)</option>
+                                        <option value="Non-Fiction" {{ old('genre', $book->genre) === 'Non-Fiction' ? 'selected' : '' }}>Non-Fiction (មិនមែនប្រលោមលោក)</option>
+                                        <option value="Science Fiction" {{ old('genre', $book->genre) === 'Science Fiction' ? 'selected' : '' }}>Science Fiction (រឿងប្រលោមលោកវិទ្យាសាស្ត្រ)</option>
+                                        <option value="Fantasy" {{ old('genre', $book->genre) === 'Fantasy' ? 'selected' : '' }}>Fantasy (ការស្រមើលស្រមៃ)</option>
+                                        <option value="Mystery" {{ old('genre', $book->genre) === 'Mystery' ? 'selected' : '' }}>Mystery (អាថ៌កំបាំង)</option>
+                                        <option value="Romance" {{ old('genre', $book->genre) === 'Romance' ? 'selected' : '' }}>Romance (ស្នេហា)</option>
+                                        <option value="Biography" {{ old('genre', $book->genre) === 'Biography' ? 'selected' : '' }}>Biography (ជីវប្រវត្តិ)</option>
+                                        <option value="History" {{ old('genre', $book->genre) === 'History' ? 'selected' : '' }}>History (ប្រវត្តិសាស្ត្រ)</option>
+                                        <option value="Education" {{ old('genre', $book->genre) === 'Education' ? 'selected' : '' }}>Education (អប់រំ)</option>
+                                        <option value="Children" {{ old('genre', $book->genre) === 'Children' ? 'selected' : '' }}>Children (កុមារ)</option>
                                     </select>
                                     @error('genre')
                                     <div class="invalid-feedback khmer-regular">{{ $message }}</div>
